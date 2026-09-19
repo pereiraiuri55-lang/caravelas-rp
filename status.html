@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Status do Servidor | Caravelas Roleplay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .status-page { padding: 80px 0 100px; }
+      .status-hero { text-align: center; margin-bottom: 34px; }
+      .status-hero h1 { font-size: clamp(2.4rem, 4vw, 4rem); margin: 16px 0 12px; letter-spacing: -0.06em; }
+      .status-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+      .status-card { background: rgba(22, 12, 15, 0.8); border: 1px solid var(--line); border-radius: 22px; padding: 28px 24px; }
+      .status-card h3 { margin: 0 0 18px; font-size: 1.35rem; }
+      .status-value { font-size: 2.5rem; font-weight: 800; color: var(--primary); margin-bottom: 10px; }
+      .status-meta { color: var(--text-soft); line-height: 1.7; }
+      .status-table { width: 100%; border-collapse: collapse; margin-top: 28px; overflow: hidden; border-radius: 18px; }
+      .status-table th, .status-table td { text-align: left; padding: 16px 18px; border-bottom: 1px solid var(--line); }
+      .status-table th { background: rgba(255,255,255,0.02); color: var(--text); }
+      .status-table td { color: var(--text-soft); }
+      .online { color: #7ef5a8; font-weight: 700; }
+      @media (max-width: 820px) { .status-grid { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="brand"><span class="brand-mark">C</span><span class="brand-text">Caravelas RP</span></div>
+        <nav class="main-nav" aria-label="Navegação principal">
+          <a href="index.html#inicio">Início</a>
+          <a href="index.html#sobre">Sobre</a>
+          <a href="status.html">Status</a>
+          <a href="cidade.html">Cidade</a>
+          <a href="rules.html">Regras</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="btn btn-ghost" href="rules.html">Regras</a>
+          <a class="btn btn-primary" href="https://discord.gg/a64RNd6j35" target="_blank" rel="noreferrer">Discord</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="status-page">
+      <div class="container">
+        <div class="status-hero">
+          <span class="section-tag">Estado da cidade</span>
+          <h1>Status do servidor</h1>
+          <p>Monitoramento da atividade, estrutura e andamento geral da comunidade.</p>
+        </div>
+
+        <div class="status-grid">
+          <article class="status-card">
+            <h3>Jogadores online</h3>
+            <div class="status-value">518</div>
+            <div class="status-meta">Atualmente na cidade e ativos em roleplay.</div>
+          </article>
+
+          <article class="status-card">
+            <h3>Discord</h3>
+            <div class="status-value">12.4k</div>
+            <div class="status-meta">Membros conectados, notícias, eventos e apoio ao servidor.</div>
+          </article>
+
+          <article class="status-card">
+            <h3>Serviço</h3>
+            <div class="status-value"><span class="online">Online</span></div>
+            <div class="status-meta">Sistema funcional e estável com staff ativa 24/7.</div>
+          </article>
+        </div>
+
+        <table class="status-table">
+          <thead>
+            <tr>
+              <th>Setor</th>
+              <th>Estado</th>
+              <th>Observação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Polícia</td>
+              <td class="online">Operacional</td>
+              <td>Patrulhas, detenções e fiscalização ativa.</td>
+            </tr>
+            <tr>
+              <td>Hospital</td>
+              <td class="online">Operacional</td>
+              <td>Emergências, tratamento e ambulâncias em serviço.</td>
+            </tr>
+            <tr>
+              <td>Empregos legais</td>
+              <td class="online">Disponíveis</td>
+              <td>Uber, transportes, mecânica, turismo e serviços públicos.</td>
+            </tr>
+            <tr>
+              <td>Tribunal / Câmara</td>
+              <td class="online">Ativo</td>
+              <td>Processos, votação e atividade legislativa em curso.</td>
+            </tr>
+            <tr>
+              <td>Eventos</td>
+              <td class="online">Semanal</td>
+              <td>Missões, desafios e atividades da comunidade.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <div class="brand footer-brand"><span class="brand-mark">C</span><span class="brand-text">Caravelas RP</span></div>
+          <p>O teu próximo capítulo começa agora.</p>
+        </div>
+        <div class="footer-links">
+          <a href="index.html#inicio">Início</a>
+          <a href="index.html#sobre">Sobre</a>
+          <a href="status.html">Status</a>
+          <a href="cidade.html">Cidade</a>
+          <a href="rules.html">Regras</a>
+        </div>
+        <a class="btn btn-primary" href="https://discord.gg/a64RNd6j35" target="_blank" rel="noreferrer">Entrar no Discord</a>
+      </div>
+      <div class="container footer-bottom"><span>© <span id="year"></span> Caravelas Roleplay. Todos os direitos reservados.</span></div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
